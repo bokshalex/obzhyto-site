@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Фото-чекап оголошення — Обжито</title>
+<meta name="description" content="Безкоштовно перевір фото оголошення про нерухомість: темні, розмиті, пересвічені, порожні кімнати. Фото нікуди не відправляються.">
+<meta property="og:image" content="og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700&family=Lora:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="./" aria-label="Обжито — на головну"><img class="light" src="logo.svg" alt="Обжито"><img class="dark" src="logo-dark.svg" alt="Обжито"></a>
+  <nav><a href="./#how">Як це працює</a><a href="./#price">Ціни</a><a class="btn" href="./#order">3 фото безкоштовно</a></nav>
+</header>
+
+<section style="padding-top:16px">
+  <span class="pill">Безкоштовно · фото не залишають твій пристрій</span>
+  <h1>Фото-чекап оголошення</h1>
+  <p class="lead muted" style="font-size:18px;max-width:40em">Додай фото квартири з оголошення — покажемо, які з них темні, розмиті, пересвічені чи замалі, і які кімнати виглядають порожніми. Аналіз іде просто в браузері.</p>
+
+  <label class="drop" id="drop" data-testid="drop">
+    <input type="file" id="files" accept="image/*" multiple hidden>
+    <strong>Обери фото</strong> або перетягни їх сюди<br>
+    <span class="muted" style="font-size:14px">JPG / PNG / WebP, до 30 фото</span>
+  </label>
+</section>
+
+<section id="result" hidden style="padding-top:0">
+  <div class="card" style="display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+    <div><div class="score" id="score">—</div><div class="muted">бал оголошення зі 100</div></div>
+    <div style="flex:1;min-width:240px"><ul id="tips" style="margin:0;padding-left:18px"></ul></div>
+  </div>
+  <div class="photos" id="photos"></div>
+  <div class="card" id="cta" style="margin-top:20px">
+    <h3>Хочеш, щоб ці фото продавали?</h3>
+    <p class="muted">Виправимо світло, приберемо зайве або віртуально мебльуємо порожні кімнати. Перші 3 фото — безкоштовно, за 24 години.</p>
+    <a class="btn" href="./#order">Надіслати 3 фото безкоштовно</a>
+  </div>
+  <p class="caption">Це автоматична оцінка за простими правилами (яскравість, контраст, різкість, розмір). Вона може помилятися — довіряй і своєму оку.</p>
+</section>
+
+<footer>
+  <p>© 2026 Обжито · <a href="privacy.html">Політика приватності</a> · <a href="terms.html">Умови</a></p>
+</footer>
+</div>
+<script src="photo-core.js"></script>
+<script src="checker.js"></script>
+</body>
+</html>
